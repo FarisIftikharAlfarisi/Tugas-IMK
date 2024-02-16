@@ -79,7 +79,7 @@
                                 <p class="text-lg leading-relaxed text-gray-900 dark:text-gray-400">
                                 <form action="{{ route('export_capaian_by_tanggal') }}" method="POST" class="flex gap-2">
                                     @csrf
-                                    <div date-rangepicker datepicker-format="dd/mm/yyyy" class="flex items-center">
+                                    <div class="flex items-center">
                                         <div class="relative">
                                             <div
                                                 class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -90,9 +90,9 @@
                                                         d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                                 </svg>
                                             </div>
-                                            <input name="tanggal_start" type="text"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Pilih tanggal awal" autocomplete="false">
+                                            <input name="tanggal_start" type="date" placeholder="Tanggal Awal" onfocus="this.type='date'" onblur="this.type='text'"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Pilih tanggal awal" autocomplete="false">
                                         </div>
                                         <span class="mx-4 text-gray-500"> Hingga </span>
                                         <div class="relative">
@@ -105,9 +105,9 @@
                                                         d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                                 </svg>
                                             </div>
-                                            <input name="tanggal_end" type="text"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Pilih tanggal akhir" autocomplete="false">
+                                            <input name="tanggal_end" type="date" placeholder="Tanggal Akhir" onfocus="this.type='date'" onblur="this.type='text'"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Pilih tanggal akhir" autocomplete="false">
                                         </div>
                                     </div>
                                     </p>

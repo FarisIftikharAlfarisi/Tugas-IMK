@@ -171,8 +171,8 @@ class AdminController extends Controller
         $startdate = $request->tanggal_start;
         $enddate = $request->tanggal_end;
 
-        $startdate = (new DateTime($startdate))->format('Y-d-m');
-        $enddate = (new DateTime($enddate))->format('Y-d-m');
+        $startdate = (new DateTime($startdate))->format('Y-m-d');
+        $enddate = (new DateTime($enddate))->format('Y-m-d');
 
         return Excel::download(new CapaianByTanggalExport($startdate, $enddate),
         'capaian-produksi-by-tanggal-'.$startdate.'-'.$enddate.'.xlsx');
