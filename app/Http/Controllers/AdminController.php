@@ -187,7 +187,6 @@ class AdminController extends Controller
         $validator = Validator::make($request->all(),[
             'username' => 'required',
             'email' => 'required',
-            'password' => 'required',
             'no_telepon' => 'required',
             'role' => 'required',
         ]);
@@ -198,7 +197,6 @@ class AdminController extends Controller
 
         $data['username'] = $request->username;
         $data['email'] = $request->email;
-        $data['password'] = $request->password;
         $data['no_telepon'] = $request->no_telepon;
         $data['role'] = $request->role;
 
