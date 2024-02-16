@@ -200,10 +200,6 @@ class AdminController extends Controller
         $data['no_telepon'] = $request->no_telepon;
         $data['role'] = $request->role;
 
-        if($request->password){
-            $data['password'] = Hash::make($request->password);
-        }
-
         User::whereId($id)->update($data);
 
         return redirect()->route('daftar_pengguna')->with('success','Berhasil mengubah data pengguna!');
